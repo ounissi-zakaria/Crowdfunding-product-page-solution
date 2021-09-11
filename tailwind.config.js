@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       width: {
-        '1/15':'06.666666666%',
+        '1/15':'6.666666666%',
         '2/15':'13.333333333%',
         '3/15':'20%',
         '4/15':'26.666666666%',
@@ -18,6 +18,21 @@ module.exports = {
         '12/15':'80%',
         '13/15':'86.666666666%',
         '14/15':'93.333333333%',
+      },
+      colors: {
+        'cyan':'hsl(176, 50%, 47%)',
+        'cyan-dark': 'hsl(176, 72%, 28%)',
+      },
+      backgroundImage: {
+        'hero-desktop': "linear-gradient(to bottom, black, 25%, transparent),url('./images/image-hero-desktop.jpg')",
+        'hero': "linear-gradient(to bottom, black, 25%, transparent),url('./images/image-hero-mobile.jpg')"
+      },
+      spacing:{
+        'main': '151.1875rem',
+        'd': '149.875rem',
+        'd1': '17.6875rem',
+        'd2': '25.5625rem',
+        'd3': '103.3125rem',
       }
     },
   },
