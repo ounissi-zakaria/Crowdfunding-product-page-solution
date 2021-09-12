@@ -27,12 +27,14 @@ module.exports = {
         'hero-desktop': "linear-gradient(to bottom, black, 25%, transparent),url('./images/image-hero-desktop.jpg')",
         'hero': "linear-gradient(to bottom, black, 25%, transparent),url('./images/image-hero-mobile.jpg')"
       },
-      spacing:{
+      spacing: {
+        'header': '23.4375rem',
         'main': '151.1875rem',
         'd': '149.875rem',
         'd1': '17.6875rem',
         'd2': '25.5625rem',
         'd3': '103.3125rem',
+        '92': '23rem',
       }
     },
   },
