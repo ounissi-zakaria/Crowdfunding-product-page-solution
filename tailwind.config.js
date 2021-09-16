@@ -1,8 +1,10 @@
 module.exports = {
-  purge: {
-    enabled: false,
-    content:[/*"./index.html","./script.js"*/]
-  },
+  mode: 'jit',
+  purge: [
+    "./index.html",
+    "./script.js"
+  ]
+  ,
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
@@ -38,6 +40,15 @@ module.exports = {
         'd2': '25.5625rem',
         'd3': '103.3125rem',
         '92': '23rem',
+        '62': '15.5rem',
+      },
+      inset: {
+        "-1/13": "-7.69230769%",
+      },
+      minHeight: {
+        "selection": "84.8125rem",
+        '60': '15rem',
+        '72': '18rem',
       }
     },
   },
