@@ -203,10 +203,10 @@
           </div>
         </div>
         <div 
-        class="hidden absolute -top-62 -left-1/13 z-20 bg-black bg-opacity-30 w-screen h-screen overflow-y-auto" 
+        class="hidden fixed inset-0 z-20 bg-black bg-opacity-30 w-screen h-screen overflow-y-auto" 
         id="selection-modal">
           <div 
-          class="text-gray-400 bg-white w-13/15 m-auto my-32 rounded border border-gray-400 min-h-selection flex flex-col">
+          class="space-y-6 py-6 text-gray-400 bg-white w-13/15 m-auto my-32 rounded border border-gray-400 flex flex-col">
             <!-- Selection modal start -->
             <div class="flex flex-row justify-between m-auto w-14/15">
               <h2 class="float-left text-xl font-medium text-black">
@@ -316,9 +316,9 @@
               </div>
             </div>
             <div id="pledge-3" 
-            class="auto-rows-min grid m-auto w-14/15 rounded border-2 border-gray-200 min-h-72">
+            class="auto-rows-min grid m-auto w-14/15 rounded border-2 border-gray-200 min-h-72 opacity-60">
               <label class="relative m-4">
-                <input type="radio" id="" name="pledge" value="Mahogany Special Edition">
+                <input type="radio" id="" name="pledge" value="Mahogany Special Edition" disabled>
                 <span class="checkmark my-2"></span>
                 <span class="ml-10 block text-black font-bold">
                   Mahogany Special Edition
@@ -353,13 +353,22 @@
             </div>
           </div>
         </div>
-        <div class="hidden">
-          <div class="ml-4">
+        <div 
+        class="hidden fixed inset-0 z-20 bg-black bg-opacity-30 w-screen h-screen overflow-y-auto"
+        id="success-modal">
+          <div class="px-4 py-8 space-y-8 text-gray-400 bg-white w-14/15 m-auto my-44 rounded border border-gray-400 flex flex-col">
             <!-- Success modal start -->
-            Thanks for your support!
-            Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
-            an email once our campaign is completed.
-            Got it!
+            <img class="m-auto" src="./images/icon-check.svg" alt="">
+            <h2 class="text-black text-center font-bold">
+              Thanks for your support!
+            </h2>
+            <p class="text-center">
+              Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
+              an email once our campaign is completed.
+            </p>
+            <button class="h-12 rounded-full bg-cyan text-white w-10/15 m-auto">
+              Got it!
+            </button>
             <!-- Success modal end -->
           </div>
         </div>

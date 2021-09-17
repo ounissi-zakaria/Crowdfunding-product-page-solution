@@ -18,6 +18,7 @@ function show_menu() {
     document.getElementById("nav-container").classList.add("hidden")
     document.getElementById("X-hamburger").classList.add("hidden")
   }
+
   function show_selection_modal(){
       document.body.scrollIntoView()
       document.getElementById("selection-modal").classList.remove("hidden")
@@ -28,10 +29,21 @@ function show_menu() {
       document.getElementsByTagName("html")[0].classList.remove("overflow-y-hidden")
   }
 
+  function show_success_modal(){
+    document.body.scrollIntoView()
+    hide_selection_modal()
+    document.getElementById("success-modal").classList.remove("hidden")
+    document.getElementsByTagName("html")[0].classList.add("overflow-y-hidden")    
+  }
+  function hide_success_modal(){
+    document.getElementById("success-modal").classList.add("hidden")
+    document.getElementsByTagName("html")[0].classList.remove("overflow-y-hidden")
+  }
   function hide_modals(e){
       if (e.keyCode == "27"){
           hide_menu()
           hide_selection_modal()
+          hide_success_modal()
       }
   }
   function select_pledge(){
@@ -77,4 +89,6 @@ function show_menu() {
   }
   for(let i = 0; i <= 3; i++){
     document.querySelector(`#pledge-${i} input[type='radio']`).addEventListener("change",highlight_selected_pledge)
-}
+    document.querySelector(`#pledge-${i} button`).addEventListener("click", show_success_modal)
+  }
+  document.querySelector("#success-modal button").addEventListener("click", hide_success_modal)
