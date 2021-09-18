@@ -92,3 +92,57 @@ function show_menu() {
     document.querySelector(`#pledge-${i} button`).addEventListener("click", show_success_modal)
   }
   document.querySelector("#success-modal button").addEventListener("click", hide_success_modal)
+
+
+  function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    let expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
+
+  function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
+
+  function change_bookmark_state(){
+      console.log("1");
+    if (getCookie("bookmark")  === "true"){
+        console.log("false");
+        setCookie("bookmark", "false", 10)
+        document.querySelector("#bookmark > span").innerText = "Bookmark"
+        document.querySelector("#bookmark").classList.add("md:hover:opacity-80")
+        document.querySelector("#bookmark").classList.remove("text-cyan", "md:hover:text-cyan-dark")
+        document.querySelector("#bookmark path").classList.remove("text-white","fill-current")
+    }else if (getCookie("bookmark") === "false") {
+        console.log("true");
+        setCookie("bookmark", "true", 10)
+        document.querySelector("#bookmark > span").innerText = "Bookmarked"
+        document.querySelector("#bookmark").classList.remove("md:hover:opacity-80")
+        document.querySelector("#bookmark").classList.add("text-cyan", "md:hover:text-cyan-dark")
+        document.querySelector("#bookmark path").classList.add("text-white","fill-current")
+    }
+  }
+
+  if (getCookie("bookmark") === ""){
+    setCookie("bookmark", "false", 10)
+  }else if (getCookie("bookmark") === "true") {
+    document.querySelector("#bookmark > span").innerText = "Bookmarked"
+    document.querySelector("#bookmark").classList.remove("md:hover:opacity-80")
+    document.querySelector("#bookmark").classList.add("text-cyan", "md:hover:text-cyan-dark")
+    document.querySelector("#bookmark path").classList.add("text-white","fill-current")
+  }
+
+document.querySelector("#bookmark").addEventListener("click", change_bookmark_state)
