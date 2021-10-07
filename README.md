@@ -6,7 +6,6 @@ This is a solution to the [Crowdfunding product page challenge on Frontend Mento
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
   - [Links](#links)
   - [Built with](#built-with)
 - [Author](#author)
@@ -24,16 +23,6 @@ Users should be able to:
 - Make a selection of which pledge to make
 - Toggle whether or not the product is bookmarked
 
-### Screenshot
-
-Desktop view:
-<img src="./screenshots/desktop.png" alt="Desktop View" width="1440">
-
-Mobile View:
-
-
-<img src="./screenshots/mobile.png" alt="Mobile View" width="375">
-
 ### Links
 
 - [live site URL](https://ounissi-zakaria.github.io/Crowdfunding-product-page-solution/)
@@ -48,7 +37,7 @@ Mobile View:
 - CSS Grid
 - Mobile-first workflow
 - [TailwindCSS](https://tailwindcss.com/) - CSS utility framework
-
+- [Reactjs][https://reactjs.org/] - Javascript framework
 ## Author
 
 - Frontend Mentor - [@ounissi-zakaria](https://www.frontendmentor.io/profile/ounissi-zakaria)
