@@ -2,7 +2,8 @@ module.exports = {
   mode: 'jit',
   purge: [
     "./index.html",
-    "./script.js"
+    "./old-index.html",
+    './src/**/*.{js,jsx,ts,tsx}',
   ]
   ,
   darkMode: false, // or 'media' or 'class'
@@ -29,8 +30,8 @@ module.exports = {
         'cyan-dark': 'hsl(176, 72%, 28%)',
       },
       backgroundImage: {
-        'hero-desktop': "linear-gradient(to bottom, black, 25%, transparent),url('./images/image-hero-desktop.jpg')",
-        'hero': "linear-gradient(to bottom, black, 25%, transparent),url('./images/image-hero-mobile.jpg')"
+        'hero-desktop': "linear-gradient(to bottom, black, 25%, transparent),url('./src/images/image-hero-desktop.jpg')",
+        'hero': "linear-gradient(to bottom, black, 25%, transparent),url('./src/images/image-hero-mobile.jpg')"
       },
     },
   },
